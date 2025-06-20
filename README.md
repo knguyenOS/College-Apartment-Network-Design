@@ -1,5 +1,9 @@
 ![banner](https://informationage-production.s3.amazonaws.com/uploads/2022/10/AdobeStock_144479354-1568x1039.jpeg)
 
+# Table of contents
+- [College Apartment Network Design Project](#college-apartment-network-design-project)
+- 
+
 # College Apartment Network Design Project
 The luxury residence hall at the University of Houston needs a network design for a student housing apartment. 
 
@@ -48,10 +52,18 @@ This project an extreme amount of time on my end drafting the initial layout to 
 For context, this was the final project for CIS 2347 network design and infrastructure. I needed to fill specific criterias such asp providing the cost estimation, IPs configuration, and layout. However, I went far above what was asked of me such as going incredibly
 in-depth regarding rack configurations, services required for disaster recovery, and configuring DHCP which I would provide.
 
-## Packet Tracer - Initial Draft
-This 
+## Visualizing and testing the layout
+When I initially started the project, I wanted to be able to logically see the design of the network and so started graphing up in packet tracer. For the first design, I had a good idea of the direction of where I wanted to go, however, had to completely startover from
+scratch due to how needlessly over-complicated I made it.
 
+<div align="center">
+  <img src="PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="800">
+</div>
 
+### Packet Tracer - Final Draft
+<div align="center">
+  <img src="PTLayout.png">
+</div>
 
 # Diagrams
 
