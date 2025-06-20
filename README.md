@@ -45,18 +45,24 @@ The luxury residence hall at the University of Houston needs a network design fo
 
 ## Walk-through
 
-
-## Diagram Overview
 ### First Floor
-![Diagram](Floor1.png)
+<div align="center">
+  <img src="Floor1.png" alt="First Floor Diagram" height="500">
+</div>
 
 ### Second Floor
-![Diagram](Floor2.png)
+<div align="center">
+  <img src="Floor2.png" alt="Second Floor Diagram" height="500">
+</div>
 
-### Third to Eight Floors
-![Diagram](Floor3-8.png)
+### Third to Eighth Floors
+<div align="center">
+  <img src="Floor3-8.png" alt="Third to Eighth Floor Diagram" height="500">
+</div>
 
 ### 2.4GHz Channel Configuration Layout
-![Diagram](2.4GHz-Channel-Configuration.png)
+<div align="center">
+  <img src="2.4GHz-Channel-Configuration.png" alt="2.4GHz Channel Diagram" height="500">
+</div>
 
 
