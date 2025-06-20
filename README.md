@@ -5,6 +5,7 @@ The luxury residence hall at the University of Houston needs a network design fo
 
 ## Description
 -  An 8-story building includes 162 two-bedroom, one-bathroom apartments spanning 6 floors.
+-  Due to a parking garage surrounding the lower floors (floor 1-2), the residence halls have bigger dimensions
 -  The 1st floor features a lobby, an office area for employees, and a server room.
 -  The 2nd floor is dedicated only to conference rooms
 
@@ -42,10 +43,17 @@ The luxury residence hall at the University of Houston needs a network design fo
   - Over **$120,000 total project cost** with detailed line items for each network component  
   - Optimized for performance without exceeding budget by **bulk ordering key components**
 
-## Walk-through
-This project
+# Walk-through
+This project an extreme amount of time on my end drafting the initial layout to get a bigger picture of the layout (i.e., using Wireshark). I've also faced many issues such as determining the scale of the layout, the approximate coverage of the WAPs and various other.
+For context, this was the final project for CIS 2347 network design and infrastructure. I needed to fill specific criterias such asp providing the cost estimation, IPs configuration, and layout. However, I went far above what was asked of me such as going incredibly
+in-depth regarding rack configurations, services required for disaster recovery, and configuring DHCP which I would provide.
 
-## Diagram
+## Packet Tracer - Initial Draft
+This 
+
+
+
+# Diagrams
 
 ### First Floor:
 <div align="center">
