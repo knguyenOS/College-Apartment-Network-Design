@@ -19,7 +19,7 @@ The luxury residence hall at the University of Houston needs a network design fo
 
 ## Features
 - **Enterprise-Grade Network Segmentation**  
-  - VLANs assigned by role: **infrastructure (VLAN 10)**, **employees (VLAN 20)**, **residents (VLAN 30)**, and **guests (VLAN 40)**  
+  - VLANs: **infrastructure (VLAN 10)**, **employees (VLAN 20)**, **residents (VLAN 30)**, and **guests (VLAN 40)**  
   - **Dynamic VLAN assignment** via RADIUS and Active Directory for secure and automatic access control  
   - **802.1X** authentication ensures only authorized devices connect
 
@@ -31,11 +31,11 @@ The luxury residence hall at the University of Houston needs a network design fo
 
 - **Scalable Cabling & Infrastructure Design**  
   - Over **120,000 feet of CAT5e** and **2,000 feet of CAT6A** cable deployed across all floors  
-  - Modular server racks (18U and 24U) with labeled patch panels, 7-8U of free space, and **RJ45 punch-down keystone jacks**  
-  - Extra switch ports, reserved VLANs, and standards-compliant cabling support **future IoT expansion, cameras**, and hardware upgrades
+  - Modular server racks (18U and 24U) with patch panels, 7-8U of free space, and **RJ45 punch-down keystone jacks**  
+  - Extra switch ports, reserved IPs, andcabling support **future IoT expansion, cameras**, and hardware upgrades
 
 - **Power Protection & Disaster Recovery**  
-  - **CyberPower OR2200LCDRT2U UPS** per rack for surge protection and ~13 minutes of backup time during outages  
+  - **CyberPower OR2200LCDRT2U UPS** per rack for surge protection (13 minutes of backup time during outages)
   - **Layered backup system**: on-site RAID-enabled servers + **AWS-based off-site backups** for disaster scenarios  
 
 - **Comprehensive Cost Breakdown**  
