@@ -42,25 +42,27 @@ The luxury residence hall at the University of Houston needs a network design fo
   - Over **$120,000 total project cost** with detailed line items for each network component  
   - Optimized for performance without exceeding budget by **bulk ordering key components**
 
-
 ## Walk-through
+This project
 
-### First Floor
+## Diagram
+
+### First Floor:
 <div align="center">
   <img src="Floor1.png" alt="First Floor Diagram" height="500">
 </div>
 
-### Second Floor
+### Second Floor:
 <div align="center">
   <img src="Floor2.png" alt="Second Floor Diagram" height="500">
 </div>
 
-### Third to Eighth Floors
+### Third to Eighth Floors:
 <div align="center">
   <img src="Floor3-8.png" alt="Third to Eighth Floor Diagram" height="500">
 </div>
 
-### 2.4GHz Channel Configuration Layout
+### 2.4GHz Channel Layout:
 <div align="center">
   <img src="2.4GHz-Channel-Configuration.png" alt="2.4GHz Channel Diagram" height="500">
 </div>
