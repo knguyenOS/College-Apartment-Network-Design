@@ -11,6 +11,10 @@
   - [Final Draft](#final-draft)
   - [DHCP and VLAN Configuration](#dhcp-and-vlan-configuration)
 - [Floor Plans](#floor-plans)
+  - [First Floor](#first-floor)
+  - [Second Floor](#second-floor)
+  - [Third to Eighth Floors](#third-to-eighth-floors)
+  - [2.4GHz Channel Layout](#24ghz-channel-layout)
 
 # College Apartment Network Design Project
 This project was developed for my CIS 2347 Infrastructure and Networking course. The scenario involves designing a secure and scalable network for a luxury residence hall at the University of Houston, intended for student housing.
