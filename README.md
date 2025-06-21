@@ -20,8 +20,8 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
 - Provide **visual diagrams** of floor plans with labeled network components.
 
 ## Programs and Applications Used
-- Microsoft Visio - for network topology and floor plan diagrams.
-- Packet Tracer - for simulation and logical design of the network.
+- **Microsoft Visio** - for network topology and floor plan diagrams.
+- **Packet Tracer** - for simulation and logical design of the network.
 
 ## Features
 - **Secure Network Segmentation**
