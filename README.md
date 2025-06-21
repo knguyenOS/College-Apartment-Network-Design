@@ -47,45 +47,47 @@ For context, this was my largest project to date and was the final assignment fo
 - Service planning for disaster recovery
 - Custom DHCP setup and server configuration
 
-## Visualizing and Testing the Layout
+## The Initial Design
 At the start of the project, I wanted to have a clear logical overview of the network, which led me to begin drafting in Cisco Packet Tracer. I haven't touched the program in a while so I spent first few days going through tutorials and building small networks to get familar again with the interface. After some time, I felt ready and I created my first design which captured the general direction I envisioned. Problem was, it became overly inefficient was tedious to configure. As a result, I made the decision to start over entirely and rebuild a cleaner, more scalable design from scratch.
-
-### The Initial Design
 
 <div align="center">
   <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="800">
 </div>
 
-### Final Draft
-I felt way more comfortable working on this design as it was even more scaled down and which I didn't need to meticuously configure each device manually. Comfortable with this design, I started implementing VLANs and DHCP to work together on the device, brainstorming the idea for the network to have 4 Vlan groups. However, this process of learning to configure the DHCP server to support this configuration as well as configuring the switches to do VLAN required days and multiple rest-less nights as I sort-of hyperfixated on this one problem which was incredibly frustrating. Here you can see it actually working in the end
+## Final Draft
+I felt much more confident working on this version of the design, as it was better scaled and no longer required me to meticulously configure each device manually. With a solid foundation in place, I started began configuring VLANs and DHCP services to work together across the network. Before starting, I analyzed the layout of the network and conceptualized organizing the network into three distinct VLAN groups.
 
-<div align="center">
-  <img src="" alt="First Floor Diagram" height="500">
-</div>
-
+However, configuring the DHCP server to properly support multiple VLANs and setting up the switches accordingly proved to be a complex and frustrating challenge. Despite the frustration, I persisted, and succeeded in getting the configuration to work. Ultimately I learned trunk and access port during this process
 
 <div align="center">
   <img src="/Diagrams/PTLayout.png">
 </div>
 
-# Diagrams
+### DHCP and VLAN Configuration
+<div align="center">
+  <img src="/Diagrams/DHCP-Configuration.png" alt="DHCP Configuration" height="500">
+</div>
 
-### First Floor:
+# Floor Plans
+The wireless access points coverage is arbitrarily set however, is based on the educated guess of the dimensions of the building which is floors 1 and 2 (100 feet by 70 feet) would have smaller dimensions than the residents’
+floors which are 240 by 150 feet. It also supports visualizing the coverage for both 2.4GHz and 5GHz (symbolized by the yellow and red circles respectively). The green lines along the walls symbolize the cabling for each of the ethernet drops for each room which leads into the server room or networking closet.
+
+## First Floor:
 <div align="center">
   <img src="/Diagrams/Floor1.png" alt="First Floor Diagram" height="500">
 </div>
 
-### Second Floor:
+## Second Floor:
 <div align="center">
   <img src="/Diagrams/Floor2.png" alt="Second Floor Diagram" height="500">
 </div>
 
-### Third to Eighth Floors:
+## Third to Eighth Floors:
 <div align="center">
   <img src="/Diagrams/Floor3-8.png" alt="Third to Eighth Floor Diagram" height="500">
 </div>
 
-### 2.4GHz Channel Layout:
+## 2.4GHz Channel Layout:
 <div align="center">
   <img src="/Diagrams/2.4GHz-Channel-Configuration.png" alt="2.4GHz Channel Diagram" height="500">
 </div>
