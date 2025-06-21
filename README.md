@@ -3,6 +3,7 @@
 # Table of contents
 - [College Apartment Network Design Project](#college-apartment-network-design-project)
 - [Walk-Through](#walk-through)
+- [Floor Plans](#floor-plans)
 
 # College Apartment Network Design Project
 This project was developed for my CIS 2347 Infrastructure and Networking course. The scenario involves designing a secure and scalable network for a luxury residence hall at the University of Houston, intended for student housing.
@@ -69,8 +70,9 @@ However, configuring the DHCP server to properly support multiple VLANs and sett
 </div>
 
 # Floor Plans
-The wireless access points coverage is arbitrarily set however, is based on the educated guess of the dimensions of the building which is floors 1 and 2 (100 feet by 70 feet) would have smaller dimensions than the residents’
-floors which are 240 by 150 feet. It also supports visualizing the coverage for both 2.4GHz and 5GHz (symbolized by the yellow and red circles respectively). The green lines along the walls symbolize the cabling for each of the ethernet drops for each room which leads into the server room or networking closet.
+The wireless access point (WAP) coverage areas were estimated based on the building’s dimensions, using informed assumptions. Floors 1 and 2 are smaller—approximately 100 by 70 feet—due to the surrounding parking garage, while the residential floors (3–8) are significantly larger at 240 by 150 feet. The coverage visualization includes both 2.4GHz and 5GHz bands, represented by yellow and red circles, respectively.
+
+All circuits that form the access layer will utilize Cat5e cables as they provide sufficient bandwidth, supporting speeds up to 1 Gbps for daily work and network traffic. For the backbone which interconnects with other switches and the various buildings on campus, Cat6A cables would be used as it supports speeds up to 10 Gbps, making it ideal to handle the increased traffic and higher throughput demands of the backbone and core
 
 ## First Floor:
 <div align="center">
