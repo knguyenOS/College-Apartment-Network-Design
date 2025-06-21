@@ -57,34 +57,34 @@ When I initially started the project, I wanted to be able to logically see the d
 scratch due to how needlessly over-complicated I made it.
 
 <div align="center">
-  <img src="PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="800">
+  <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="800">
 </div>
 
 ### Packet Tracer - Final Draft
 <div align="center">
-  <img src="PTLayout.png">
+  <img src="/Diagrams/PTLayout.png">
 </div>
 
 # Diagrams
 
 ### First Floor:
 <div align="center">
-  <img src="Floor1.png" alt="First Floor Diagram" height="500">
+  <img src="/Diagrams/Floor1.png" alt="First Floor Diagram" height="500">
 </div>
 
 ### Second Floor:
 <div align="center">
-  <img src="Floor2.png" alt="Second Floor Diagram" height="500">
+  <img src="/Diagrams/Floor2.png" alt="Second Floor Diagram" height="500">
 </div>
 
 ### Third to Eighth Floors:
 <div align="center">
-  <img src="Floor3-8.png" alt="Third to Eighth Floor Diagram" height="500">
+  <img src="/Diagrams/Floor3-8.png" alt="Third to Eighth Floor Diagram" height="500">
 </div>
 
 ### 2.4GHz Channel Layout:
 <div align="center">
-  <img src="2.4GHz-Channel-Configuration.png" alt="2.4GHz Channel Diagram" height="500">
+  <img src="/Diagrams/2.4GHz-Channel-Configuration.png" alt="2.4GHz Channel Diagram" height="500">
 </div>
 
 
