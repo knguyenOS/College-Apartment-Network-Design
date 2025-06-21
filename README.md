@@ -63,7 +63,7 @@ For context, this was my largest project to date and was the final assignment fo
 At the start of the project, I wanted to have a clear logical overview of the network, which led me to begin drafting in Cisco Packet Tracer. I hadn't touched the program in a while, so I spent the first few days going through tutorials and building small networks to get familiar with the interface. After some time, I felt ready and created my first design, which captured the general direction I envisioned. The problem was that it became overly inefficient and tedious to configure. As a result, I made the decision to start over entirely and rebuild a cleaner, more scalable design from scratch.
 
 <div align="center">
-  <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="800">
+  <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="700">
 </div>
 
 ## Final Draft
@@ -77,7 +77,7 @@ However, configuring the DHCP server to properly support multiple VLANs and sett
 
 ### DHCP and VLAN Configuration
 <div align="center">
-  <img src="/Diagrams/DHCP-Configuration.png" alt="DHCP Configuration" height="500">
+  <img src="/Diagrams/DHCP-Configuration.png" alt="DHCP Configuration" height="600">
 </div>
 
 # Floor Plans
