@@ -1,8 +1,15 @@
 ![banner](https://informationage-production.s3.amazonaws.com/uploads/2022/10/AdobeStock_144479354-1568x1039.jpeg)
 
-# Table of contents
+# Table of Contents
 - [College Apartment Network Design Project](#college-apartment-network-design-project)
-- [Walk-Through](#walk-through)
+  - [Description](#description)
+  - [Objectives](#objectives)
+  - [Programs and Applications Used](#programs-and-applications-used)
+  - [Features](#features)
+- [Walk-through](#walk-through)
+  - [The Initial Design](#the-initial-design)
+  - [Final Draft](#final-draft)
+  - [DHCP and VLAN Configuration](#dhcp-and-vlan-configuration)
 - [Floor Plans](#floor-plans)
 
 # College Apartment Network Design Project
@@ -29,7 +36,7 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
   - Utilizes VLANs to separate traffic based on user roles (infrastructure, employees, residents, and guests)
 
 - **Robust Hardware Configuration**
-  - Deploys access switches, core switches, wireless access points (WAPs) and servers supporting Active Directory and DHCP, with with RAID support
+  - Deploys access switches, core switches, wireless access points (WAPs) and servers supporting Active Directory and DHCP, with RAID support
 
 - **Scalable Infrastructure Design**  
   - Implements modular server racks sufficient ports and physical space to accomodate future growth
@@ -41,22 +48,22 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
   - Total estimated project cost: **$120,000+**, with detailed line items for each network component  
 
 # Walk-through
-This project required a significant amount of time and effort to draft the initial network layout and gain a broader understanding of the building’s structure and network flow (e.g., using tools like Packet Tracer). Throughout the process, I encountered several challenges—such as determining the correct layout scale, estimating the wireless access point (WAP) coverage areas, and ensuring efficient device placement.
+This project required a significant amount of time and effort to draft the initial network layout and gain a broader understanding of the building’s structure and network flow (e.g., using tools like Packet Tracer). Throughout the process, I encountered several challenges—such as determining the correct layout scale, estimating the WAPs coverage areas, and ensuring efficient device placement.
 
-For context, this was my largest project to date and was the final assignment for my CIS 2347: Network Design and Infrastructure course. The assignment required specific deliverables such as a cost estimate, IP configuration plan, and network layout. At of passion and ambition, I went well beyond the core requirements by diving deeply into areas like:
+For context, this was my largest project to date and was the final assignment for my CIS 2347: Network Design and Infrastructure course. The assignment required specific deliverables such as a cost estimate, IP configuration plan, and network layout. Out of passion and ambition, I went well beyond the core requirements by diving deeply into areas like:
 - Detailed rack configurations
 - Service planning for disaster recovery
 - Custom DHCP setup and server configuration
 
 ## The Initial Design
-At the start of the project, I wanted to have a clear logical overview of the network, which led me to begin drafting in Cisco Packet Tracer. I haven't touched the program in a while so I spent first few days going through tutorials and building small networks to get familar again with the interface. After some time, I felt ready and I created my first design which captured the general direction I envisioned. Problem was, it became overly inefficient was tedious to configure. As a result, I made the decision to start over entirely and rebuild a cleaner, more scalable design from scratch.
+At the start of the project, I wanted to have a clear logical overview of the network, which led me to begin drafting in Cisco Packet Tracer. I haven't touched the program in a while so I spent first few days going through tutorials and building small networks to get familar again with the interface. After some time, I felt ready and I created my first design which captured the general direction I envisioned. The problem was that it became overly inefficient and tedious to configure. As a result, I made the decision to start over entirely and rebuild a cleaner, more scalable design from scratch.
 
 <div align="center">
   <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="800">
 </div>
 
 ## Final Draft
-I felt much more confident working on this version of the design, as it was better scaled and no longer required me to meticulously configure each device manually. With a solid foundation in place, I started began configuring VLANs and DHCP services to work together across the network. Before starting, I analyzed the layout of the network and conceptualized organizing the network into three distinct VLAN groups.
+I felt much more confident working on this version of the design, as it was better scaled and no longer required me to meticulously configure each device manually. With a solid foundation in place, I began configuring VLANs and DHCP services to work together across the network. Before starting, I analyzed the layout of the network and conceptualized organizing the network into three distinct VLAN groups.
 
 However, configuring the DHCP server to properly support multiple VLANs and setting up the switches accordingly proved to be a complex and frustrating challenge. Despite the frustration, I persisted, and succeeded in getting the configuration to work. Ultimately I learned trunk and access port during this process
 
