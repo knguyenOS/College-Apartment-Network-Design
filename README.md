@@ -59,9 +59,7 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
   - Total estimated project cost: **$120,000+**, with detailed line items for each network component.
 
 # Walk-through
-This project required a significant amount of time and effort to draft the initial network layout and gain a broader understanding of the building’s structure and network flow. 
-
-Throughout the process, I encountered several challenges—such as determining the correct layout scale, estimating the WAP coverage areas, and ensuring efficient device placement.
+This project required a significant amount of time and effort to not only draft the initial layout, but also to structure the entire network to work cohesively together. This forced me to think more in-depth regarding determining the correct scale, estimating the WAP coverage areas, and ensuring that all devices were placed and connected in an efficient manner. Because of this, process, I encountered several challenges—such which led to restless nights and frustration, but which led me to learn way more in terms of designing a network
 
 > This was my **largest and most comprehensive project** to date, involving hands-on work with **DHCP, VLANs, server racks, and disaster recovery planning**.
 
@@ -158,9 +156,13 @@ This network design balances **performance, scalability, and cost**. With an est
 |                                |                                                                                  |          | **Total**     | **$120,017.30** |
 
 # Floor Plans
-The wireless access point (WAP) coverage areas were estimated based on the building’s dimensions, using informed assumptions. Floors 1 and 2 are smaller—approximately 100 by 70 feet—due to the surrounding parking garage, while the residential floors (3–8) are significantly larger at 240 by 150 feet. The coverage visualization includes both 2.4GHz and 5GHz bands, represented by yellow and red circles, respectively.
+Floors 1 and 2 is approximately 100 by 70 feet.
 
-All circuits that form the access layer will utilize Cat5e cables, as they provide sufficient bandwidth to support speeds up to 1 Gbps. For the backbone, Cat6A cables will be used, supporting up to 10 Gbps.
+Residential floors (3–8) are 240 by 150 feet.
+
+The coverage visualization includes both 2.4GHz and 5GHz bands, represented by yellow and red circles, respectively.
+
+All circuits that form the access layer will utilize Cat5e cables highlighted by **GREEN**, and backbone cables utilizing CAT6A are highlighted by **ORANGE**
 
 ## First Floor:
 <p align="center">
@@ -185,7 +187,13 @@ All circuits that form the access layer will utilize Cat5e cables, as they provi
 # Conclusion
 
 ## Lessons Learned
-This project taught me the real-world complexities of designing scalable networks—from equipment selection to failover planning. I gained confidence configuring VLANs, simulating networks in Packet Tracer, and planning with disaster recovery in mind. 
+Though this documentation doesn't cover every step and moment of frustration, this project taught me a lot about the real-world complexities involved in designing scalable networks. From planning for scalability to implementing failover strategies, I gained confidence in configuring VLANs, simulating networks in Packet Tracer, and researching components and features more intuitively.
+
+Looking back, here are some notable things I would do differently if I had the chance to start over:
+- Start prototyping sooner
+- Rely less on trial-and-error
+- Focus on one step at a time
+- Recognize when I'm taking on too much
 
 ## Final Thoughts
-If I could do it again, I would start prototyping sooner and rely less on trial-and-error during the initial design phase. This experience has strengthened both my technical and project management skills.
+This project was an incredibly fun and valuable learning experience, despite the many restless nights and frustrating challenges along the way. In hindsight, the most rewarding part was realizing how ambitious I can be when I’m truly passionate about a goal or project.
