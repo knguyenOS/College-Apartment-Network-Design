@@ -79,12 +79,7 @@ This captured the general direction I envisioned, however, became overly ineffic
 </div>
 
 ## Secure Network Segmentation
-With a solid foundation in place, I began configuring VLANs and DHCP services to work together across the network. Before starting, I analyzed the layout of the network and conceptualized organizing it into 4 distinct VLAN groups.
-- VLAN 30
-- VLAN 20
-- VLAN 10
-
-However, configuring the DHCP server to properly support multiple VLANs and setting up the switches accordingly proved to be a complex and frustrating challenge. Despite the frustration, I persisted and succeeded in getting the configuration to work. Ultimately, I gained hands-on experience with trunk and access ports during this process.
+With a solid foundation in place, I began configuring VLANs and DHCP services to work together across the network. However, configuring the DHCP server to properly support multiple VLANs and setting up the switches accordingly proved to be a complex and frustrating challenge. Despite the frustration, I persisted and succeeded in getting the configuration to work. Ultimately, I gained hands-on experience with trunk and access ports during this process.
 
 ### DHCP and VLAN Configuration
 <div align="center">
@@ -102,9 +97,14 @@ However, configuring the DHCP server to properly support multiple VLANs and sett
 - Optimized for high-speed backbone interconnects using SFP+ transceivers and Cat6A cabling
 - Ensures fast data delivery and redundancy between floors.
 
-All switches are rack-mountable and housed in StarTech.com 18U server racks per floor. Core equipment—including servers, routers, and patch panels—are centralized in a Tripp Lite 24U server enclosure located in the main distribution frame (MDF). Network devices are organized using blank keystone patch panels, Cat5e/Cat6 cables, and RJ45 connectors, enabling clean, scalable cabling layouts.
+All switches are **rack-mountable** and housed in **server rack** per floor.
+- Each floor contains an intermediate distribution frame (IDF) room for housing the server rack
+- Core equipments, including servers, core switches, and routers are centralized in a 24U server enclosure located in the main distribution frame (MDF)
+- Network devices are organized using blank keystone patch panels, Cat5e/Cat6 cables, and RJ45 connectors, enabling clean, scalable cabling layouts.
 
-To serve authentication and addressing needs, two Dell PowerEdge R240 servers run Active Directory and DHCP, allowing for centralized identity management, dynamic IP allocation, and VLAN-based traffic segmentation. These servers are backed with RAID support and can be expanded as needed.
+To serve authentication and addressing needs:
+- Two Dell PowerEdge R240 servers run Active Directory and DHCP foridentity management, DHCP, VLAN-based traffic segmentation.
+- These servers are backed with RAID support and can be expanded as needed.
 
 
 ## Scalable Infrastructure Design
@@ -120,7 +120,7 @@ The use of bulk Cat5e and Cat6A spools, along with modular cabling infrastructur
 <div align="center">
   <img src="/Diagrams/Network-Closet-Switch-Configuration.png" height="700">
   <br>
-  <em>General idea of how the cables are to be configured on the switches. Green is the ethernet drops in resident's room. Red is the floor's WAPs</em>
+  <em>General idea of how the cables are to be configured on the access switches. Green is the ethernet drops in resident's room. Red is the floor's WAPs</em>
 </div>
 
 ## Power Protection & Disaster Recovery
