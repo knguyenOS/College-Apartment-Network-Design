@@ -155,13 +155,17 @@ This network design balances **performance, scalability, and cost**. With an est
 |                                |                                                                                  |          | **Total**     | **$120,017.30** |
 
 # Floor Plans
-Floors 1-2
+**Floors 1-2**
 - Approximately **100 by 70 feet**, due to the surrounding parking garage.
 
-Floors 3–8
+**Floors 3–8**
 - Approximately **240 by 150 feet**.
-- 
-WAP coverage visualization
+
+**Ethernet Drops**
+- Visualized by a blue rectangle in each room
+- #'s of drops represented by the nodes/arms
+
+**WAP coverage visualization**
 - **2.4GHz** represented by **yellow** circles
 - **5GHz** represented by **red** circles
 
