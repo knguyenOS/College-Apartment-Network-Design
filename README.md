@@ -66,12 +66,16 @@ This captured the general direction I envisioned, however, became overly ineffic
 
 <div align="center">
   <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="700">
+  <br>
+  <em>Captured the general direction I envisioned, however, became overly inefficient and tedious to configure and so was scrapped.</em>
 </div>
 
 ## Final Draft
 
 <div align="center">
   <img src="/Diagrams/PTLayout.png" alt="Final Packet Tracer Layout">
+  <br>
+  <em>This newer scaled down version led to way less headaches needing to track and configure every switches.</em>
 </div>
 
 ## Secure Network Segmentation
@@ -85,21 +89,49 @@ However, configuring the DHCP server to properly support multiple VLANs and sett
 ### DHCP and VLAN Configuration
 <div align="center">
   <img src="/Diagrams/DHCP-Configuration.png" alt="DHCP Configuration" height="600">
+  <br>
+  <em>Configuring this page took many hours understanding how default gateways work in a VLAN level and even more configuring the switches to work with it.</em>
 </div>
 
-
 ## Robust Hardware Configuration
+**Cisco Catalyst 1200** access switches with 48 ports 
+- Support both Power over Ethernet (PoE) and SFP+ uplinks
+- Delivers up to 1 Gbps per port while powering connected WAPs and reducing setup complexity.
+
+**Cisco Catalyst 1300-24XS** core switches 
+- Optimized for high-speed backbone interconnects using SFP+ transceivers and Cat6A cabling
+- Ensures fast data delivery and redundancy between floors.
+
+All switches are rack-mountable and housed in StarTech.com 18U server racks per floor. Core equipment—including servers, routers, and patch panels—are centralized in a Tripp Lite 24U server enclosure located in the main distribution frame (MDF). Network devices are organized using blank keystone patch panels, Cat5e/Cat6 cables, and RJ45 connectors, enabling clean, scalable cabling layouts.
+
+To serve authentication and addressing needs, two Dell PowerEdge R240 servers run Active Directory and DHCP, allowing for centralized identity management, dynamic IP allocation, and VLAN-based traffic segmentation. These servers are backed with RAID support and can be expanded as needed.
+
 
 ## Scalable Infrastructure Design
+Each floor's server rack contains 7U of available space after fitting switches, patch panels, and UPS.
+- Allows for the addition of switches, monitoring equipment, or storage arrays.
+
+The network topology uses a hybrid routed and switched backbone architecture, balancing performance with flexibility. 
+- Each access switch is connected to two core switches for redundancy and load balancing.
+- Modular components like patch panels, keystone jacks, and transceivers allow for quick replacement and addition without rewiring the entire system.
+
+The use of bulk Cat5e and Cat6A spools, along with modular cabling infrastructure, ensures new Ethernet drops and endpoints can be added without major overhauls. 802.1Q VLAN tagging and dynamic VLAN assignment via RADIUS and Active Directory further improve logical scalability, enabling seamless segmentation of new users and devices.
+
+<div align="center">
+  <img src="/Diagrams/Network-Closet-Switch-Configuration.png" height="700">
+  <br>
+  <em>General idea of how the cables are to be configured on the switches. Green is the ethernet drops in resident's room. Red is the floor's WAPs</em>
+</div>
 
 ## Power Protection & Disaster Recovery
-Every rack is equipped with a CyberPower Smart App Intelligent LCD OR2200LCDRT2U UPS, delivering 2000VA of backup power and surge protection. This setup can sustain operation for several minutes during a power outage, providing enough time for safe shutdowns or auto-failover to backup systems.
+Every rack is equipped with a **CyberPower Smart App Intelligent LCD OR2200LCDRT2U UPS** 
+- Delivers **2000VA** of backup power and **surge protection**
+- Can sustain operation for **several minutes** during a power outage
+- Enough time for **safe shutdowns** or **auto-failover** to backup systems.
 
-To enhance data resilience, a dual-layered backup approach is implemented:
-- Local backups are hosted on the main servers for fast file restoration in case of minor failures.
-- Off-site cloud backups via AWS ensure continuity during catastrophic events like natural disasters, using geo-redundant storage and scalable infrastructure.
-
-Both systems are monitored and tested regularly to ensure integrity, with clear procedures in place for emergency response and staff coordination. Backup priorities are set to protect institutional, employee, and student data first.
+To enhance data resilience, a dual-layered backup approach is suggested:
+- Local backups are hosted on the **main servers** for **fast file restoration** in case of minor failures.
+- Off-site **cloud backups via AWS** ensure continuity during **catastrophic events** like natural disasters.
 
 ## Comprehensive Cost Breakdown
 This network design balances **performance, scalability, and cost**. With an estimated total of **$120,017.30**, each component was chosen not just for compatibility, but also for long-term value and reliability. The budget covers:
