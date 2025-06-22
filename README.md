@@ -1,20 +1,24 @@
 ![banner](https://informationage-production.s3.amazonaws.com/uploads/2022/10/AdobeStock_144479354-1568x1039.jpeg)
 
+# College Apartment Network Design Documentation
+_A detailed technical overview of my final project for CIS 2347: Infrastructure and Networking._
+
 # Table of Contents
-- [College Apartment Network Design Project](#college-apartment-network-design-project)
+- [Project Overview](#college-apartment-network-design-project)
   - [Description](#description)
   - [Objectives](#objectives)
-  - [Programs and Applications Used](#programs-and-applications-used)
-  - [Features](#features)
-- [Walk-through](#walk-through)
-  - [The Initial Design](#the-initial-design)
+  - [Tools Used](#programs-and-applications-used)
+  - [Key Features](#features)
+- [Project Walkthrough](#walk-through)
+  - [Initial Design](#the-initial-design)
   - [Final Draft](#final-draft)
-  - [DHCP and VLAN Configuration](#dhcp-and-vlan-configuration)
-- [Floor Plans](#floor-plans)
-  - [First Floor](#first-floor)
-  - [Second Floor](#second-floor)
-  - [Third to Eighth Floors](#third-to-eighth-floors)
-  - [2.4GHz Channel Layout](#24ghz-channel-layout)
+  - [DHCP & VLAN](#dhcp-and-vlan-configuration)
+- [Hardware & Infrastructure](#robust-hardware-configuration)
+  - [Power & Disaster Recovery](#power-protection--disaster-recovery)
+  - [Scalability](#scalable-infrastructure-design)
+- [Budget & Equipment](#comprehensive-cost-breakdown)
+- [Floor Plans & Channel Layout](#floor-plans)
+- [Reflection](#reflection)
 
 # College Apartment Network Design Project
 This project was developed for my CIS 2347 Infrastructure and Networking course. The scenario involves designing a secure and scalable network for a luxury residence hall at the University of Houston, intended for student housing.
@@ -54,41 +58,27 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
 # Walk-through
 This project required a significant amount of time and effort to draft the initial network layout and gain a broader understanding of the building’s structure and network flow (e.g., using tools like Packet Tracer). Throughout the process, I encountered several challenges—such as determining the correct layout scale, estimating the WAP coverage areas, and ensuring efficient device placement.
 
-For context, this was my largest project to date and was the final assignment for my CIS 2347: Network Design and Infrastructure course. The assignment required specific deliverables such as a cost estimate, IP configuration plan, and network layout. Out of passion and ambition, I went well beyond the core requirements by diving deeply into areas like:
-- Detailed rack configurations.
-- Service planning for disaster recovery.
-- Custom DHCP setup and server configuration.
+> This was my **largest and most comprehensive project** to date, involving hands-on work with **DHCP, VLANs, server racks, and disaster recovery planning**.
 
 ## The Initial Design
-At the start of the project, I wanted to have a clear logical overview of the network, which led me to begin drafting in Cisco Packet Tracer. I hadn't touched the program in a while, so I spent the first few days going through tutorials and building small networks to get familiar with the interface. After some time, I felt ready and created my first design.
-
-This captured the general direction I envisioned, however, became overly inefficient and tedious to configure. I made the decision to start over entirely and rebuild a cleaner, more scalable design from scratch.
-
-<div align="center">
-  <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="700">
-  <br>
+<p align="center">
+  <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="700"><br>
   <em>Captured the general direction I envisioned, however, became overly inefficient and tedious to configure and so was scrapped.</em>
-</div>
+</p>
 
 ## Final Draft
-
-<div align="center">
-  <img src="/Diagrams/PTLayout.png" alt="Final Packet Tracer Layout">
-  <br>
+<p align="center">
+  <img src="/Diagrams/PTLayout.png" alt="Final Packet Tracer Layout"><br>
   <em>This newer scaled down version led to way less headaches needing to track and configure every switches.</em>
-</div>
+</p>
 
-## Secure Network Segmentation
-With a solid foundation in place, I began configuring VLANs and DHCP services to work together across the network. However, configuring the DHCP server to properly support multiple VLANs and setting up the switches accordingly proved to be a complex and frustrating challenge. Despite the frustration, I persisted and succeeded in getting the configuration to work. Ultimately, I gained hands-on experience with trunk and access ports during this process.
-
-### DHCP and VLAN Configuration
-<div align="center">
-  <img src="/Diagrams/DHCP-Configuration.png" alt="DHCP Configuration" height="600">
-  <br>
+## DHCP and VLAN Configuration
+<p align="center">
+  <img src="/Diagrams/DHCP-Configuration.png" alt="DHCP Configuration" height="600"><br>
   <em>Configuring this page took many hours understanding how default gateways work in a VLAN level and even more configuring the switches to work with it.</em>
-</div>
+</p>
 
-## Robust Hardware Configuration
+# Robust Hardware Configuration
 **Cisco Catalyst 1200** access switches with 48 ports 
 - Support both Power over Ethernet (PoE) and SFP+ uplinks
 - Delivers up to 1 Gbps per port while powering connected WAPs and reducing setup complexity.
@@ -99,15 +89,14 @@ With a solid foundation in place, I began configuring VLANs and DHCP services to
 
 All switches are **rack-mountable** and housed in **server rack** per floor.
 - Each floor contains an intermediate distribution frame (IDF) room for housing the server rack
-- Core equipments, including servers, core switches, and routers are centralized in a 24U server enclosure located in the main distribution frame (MDF)
+- Core equipment, including servers, core switches, and routers are centralized in a 24U server enclosure located in the main distribution frame (MDF)
 - Network devices are organized using blank keystone patch panels, Cat5e/Cat6 cables, and RJ45 connectors, enabling clean, scalable cabling layouts.
 
 To serve authentication and addressing needs:
-- Two Dell PowerEdge R240 servers run Active Directory and DHCP foridentity management, DHCP, VLAN-based traffic segmentation.
+- Two Dell PowerEdge R240 servers run Active Directory and DHCP for identity management, VLAN-based traffic segmentation.
 - These servers are backed with RAID support and can be expanded as needed.
 
-
-## Scalable Infrastructure Design
+# Scalable Infrastructure Design
 Each floor's server rack contains 7U of available space after fitting switches, patch panels, and UPS.
 - Allows for the addition of switches, monitoring equipment, or storage arrays.
 
@@ -115,15 +104,14 @@ The network topology uses a hybrid routed and switched backbone architecture, ba
 - Each access switch is connected to two core switches for redundancy and load balancing.
 - Modular components like patch panels, keystone jacks, and transceivers allow for quick replacement and addition without rewiring the entire system.
 
-The use of bulk Cat5e and Cat6A spools, along with modular cabling infrastructure, ensures new Ethernet drops and endpoints can be added without major overhauls. 802.1Q VLAN tagging and dynamic VLAN assignment via RADIUS and Active Directory further improve logical scalability, enabling seamless segmentation of new users and devices.
+The use of bulk Cat5e and Cat6A spools, along with modular cabling infrastructure, ensures new Ethernet drops and endpoints can be added without major overhauls. 802.1Q VLAN tagging and dynamic VLAN assignment via RADIUS and Active Directory further improve logical scalability.
 
-<div align="center">
-  <img src="/Diagrams/Network-Closet-Switch-Configuration.png" height="700">
-  <br>
-  <em>General idea of how the cables are to be configured on the access switches. Green is the ethernet drops in resident's room. Red is the floor's WAPs</em>
-</div>
+<p align="center">
+  <img src="/Diagrams/Network-Closet-Switch-Configuration.png" height="700"><br>
+  <em>General idea of how the cables are to be configured on the access switches. Green is the ethernet drops in resident's room. Red is the floor's WAPs.</em>
+</p>
 
-## Power Protection & Disaster Recovery
+# Power Protection & Disaster Recovery
 Every rack is equipped with a **CyberPower Smart App Intelligent LCD OR2200LCDRT2U UPS** 
 - Delivers **2000VA** of backup power and **surge protection**
 - Can sustain operation for **several minutes** during a power outage
@@ -133,7 +121,7 @@ To enhance data resilience, a dual-layered backup approach is suggested:
 - Local backups are hosted on the **main servers** for **fast file restoration** in case of minor failures.
 - Off-site **cloud backups via AWS** ensure continuity during **catastrophic events** like natural disasters.
 
-## Comprehensive Cost Breakdown
+# Comprehensive Cost Breakdown
 This network design balances **performance, scalability, and cost**. With an estimated total of **$120,017.30**, each component was chosen not just for compatibility, but also for long-term value and reliability. The budget covers:
 - Wireless Access Points
 - Server Racks
@@ -164,28 +152,32 @@ This network design balances **performance, scalability, and cost**. With an est
 | DHCP Software                  | Cisco Prime Network Registrar DHCP                                              | 1        | $16,250.00    | $16,250.00   |
 |                                |                                                                                  |          | **Total**     | **$120,017.30** |
 
-
 # Floor Plans
 The wireless access point (WAP) coverage areas were estimated based on the building’s dimensions, using informed assumptions. Floors 1 and 2 are smaller—approximately 100 by 70 feet—due to the surrounding parking garage, while the residential floors (3–8) are significantly larger at 240 by 150 feet. The coverage visualization includes both 2.4GHz and 5GHz bands, represented by yellow and red circles, respectively.
 
-All circuits that form the access layer will utilize Cat5e cables, as they provide sufficient bandwidth to support speeds up to 1 Gbps for daily work and network traffic. For the backbone—which interconnects with other switches and buildings on campus—Cat6A cables will be used, as they support speeds up to 10 Gbps, making them ideal for handling increased traffic and higher throughput demands at the core.
+All circuits that form the access layer will utilize Cat5e cables, as they provide sufficient bandwidth to support speeds up to 1 Gbps. For the backbone, Cat6A cables will be used, supporting up to 10 Gbps.
 
 ## First Floor:
-<div align="center">
+<p align="center">
   <img src="/Diagrams/Floor1.png" alt="First Floor Diagram" height="500">
-</div>
+</p>
 
 ## Second Floor:
-<div align="center">
+<p align="center">
   <img src="/Diagrams/Floor2.png" alt="Second Floor Diagram" height="500">
-</div>
+</p>
 
 ## Third to Eighth Floors:
-<div align="center">
+<p align="center">
   <img src="/Diagrams/Floor3-8.png" alt="Third to Eighth Floor Diagram" height="500">
-</div>
+</p>
 
 ## 2.4GHz Channel Layout:
-<div align="center">
+<p align="center">
   <img src="/Diagrams/2.4GHz-Channel-Configuration.png" alt="2.4GHz Channel Diagram" height="500">
-</div>
+</p>
+
+# Reflection
+This project taught me the real-world complexities of designing scalable networks—from equipment selection to failover planning. I gained confidence configuring VLANs, simulating networks in Packet Tracer, and planning with disaster recovery in mind. 
+
+If I could do it again, I would start prototyping sooner and rely less on trial-and-error during the initial design phase. This experience has strengthened both my technical and project management skills.
