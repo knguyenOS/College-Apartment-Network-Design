@@ -30,6 +30,7 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
 - The **1st floor** includes a lobby, an office space, and a centralized server room.
 - The **2nd floor** is dedicated to conference rooms.
 - A surrounding parking garage on floors 1 and 2 results in reduced floor dimensions compared to the residential levels.
+- [Click here for floor plans](#floor-plans)
 
 ## Objectives
 - Design a **secure, efficient, and cost-effective** network infrastructure.
