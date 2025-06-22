@@ -18,7 +18,9 @@ _A detailed technical overview of my final project for CIS 2347: Infrastructure 
   - [Scalability](#scalable-infrastructure-design)
 - [Budget & Equipment](#comprehensive-cost-breakdown)
 - [Floor Plans & Channel Layout](#floor-plans)
-- [Reflection](#reflection)
+- [Conclusion](#conclusion)
+  - [Lessons Learned](#lessons-learned)
+  - [Final Thoughts](#final-thoughts)
 
 # College Apartment Network Design Project
 This project was developed for my CIS 2347 Infrastructure and Networking course. The scenario involves designing a secure and scalable network for a luxury residence hall at the University of Houston, intended for student housing.
@@ -56,7 +58,9 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
   - Total estimated project cost: **$120,000+**, with detailed line items for each network component.
 
 # Walk-through
-This project required a significant amount of time and effort to draft the initial network layout and gain a broader understanding of the building’s structure and network flow (e.g., using tools like Packet Tracer). Throughout the process, I encountered several challenges—such as determining the correct layout scale, estimating the WAP coverage areas, and ensuring efficient device placement.
+This project required a significant amount of time and effort to draft the initial network layout and gain a broader understanding of the building’s structure and network flow. 
+
+Throughout the process, I encountered several challenges—such as determining the correct layout scale, estimating the WAP coverage areas, and ensuring efficient device placement.
 
 > This was my **largest and most comprehensive project** to date, involving hands-on work with **DHCP, VLANs, server racks, and disaster recovery planning**.
 
@@ -177,7 +181,10 @@ All circuits that form the access layer will utilize Cat5e cables, as they provi
   <img src="/Diagrams/2.4GHz-Channel-Configuration.png" alt="2.4GHz Channel Diagram" height="500">
 </p>
 
-# Reflection
+# Conclusion
+
+## Lessons Learned
 This project taught me the real-world complexities of designing scalable networks—from equipment selection to failover planning. I gained confidence configuring VLANs, simulating networks in Packet Tracer, and planning with disaster recovery in mind. 
 
+## Final Thoughts
 If I could do it again, I would start prototyping sooner and rely less on trial-and-error during the initial design phase. This experience has strengthened both my technical and project management skills.
