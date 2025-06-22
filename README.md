@@ -26,7 +26,7 @@ _A detailed technical overview of my final project for CIS 2347: Infrastructure 
 This project was developed for my CIS 2347 Infrastructure and Networking course. The scenario involves designing a secure and scalable network for a luxury residence hall at the University of Houston, intended for student housing.
 
 ## Description
-- An 8-story building contains 162 two-bedroom, one-bathroom apartments spread across six residential floors.
+- An 8-story building contains **162 two-bedroom, one-bathroom apartments** spread across **six residential floors**.
 - The **1st floor** includes a lobby, an office space, and a centralized server room.
 - The **2nd floor** is dedicated to conference rooms.
 - A surrounding parking garage on floors 1 and 2 results in reduced floor dimensions compared to the residential levels.
