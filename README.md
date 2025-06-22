@@ -60,25 +60,78 @@ For context, this was my largest project to date and was the final assignment fo
 - Custom DHCP setup and server configuration.
 
 ## The Initial Design
-At the start of the project, I wanted to have a clear logical overview of the network, which led me to begin drafting in Cisco Packet Tracer. I hadn't touched the program in a while, so I spent the first few days going through tutorials and building small networks to get familiar with the interface. After some time, I felt ready and created my first design, which captured the general direction I envisioned. The problem was that it became overly inefficient and tedious to configure. As a result, I made the decision to start over entirely and rebuild a cleaner, more scalable design from scratch.
+At the start of the project, I wanted to have a clear logical overview of the network, which led me to begin drafting in Cisco Packet Tracer. I hadn't touched the program in a while, so I spent the first few days going through tutorials and building small networks to get familiar with the interface. After some time, I felt ready and created my first design.
+
+This captured the general direction I envisioned, however, became overly inefficient and tedious to configure. I made the decision to start over entirely and rebuild a cleaner, more scalable design from scratch.
 
 <div align="center">
   <img src="/Diagrams/PT_Initial_Layout.png" alt="Packet Tracer Layout Draft" height="700">
 </div>
 
 ## Final Draft
-I felt much more confident working on this version of the design, as it was better scaled and no longer required me to meticulously configure each device manually. With a solid foundation in place, I began configuring VLANs and DHCP services to work together across the network. Before starting, I analyzed the layout of the network and conceptualized organizing it into three distinct VLAN groups.
-
-However, configuring the DHCP server to properly support multiple VLANs and setting up the switches accordingly proved to be a complex and frustrating challenge. Despite the frustration, I persisted and succeeded in getting the configuration to work. Ultimately, I gained hands-on experience with trunk and access ports during this process.
 
 <div align="center">
   <img src="/Diagrams/PTLayout.png" alt="Final Packet Tracer Layout">
 </div>
 
+## Secure Network Segmentation
+With a solid foundation in place, I began configuring VLANs and DHCP services to work together across the network. Before starting, I analyzed the layout of the network and conceptualized organizing it into 4 distinct VLAN groups.
+- VLAN 30
+- VLAN 20
+- VLAN 10
+
+However, configuring the DHCP server to properly support multiple VLANs and setting up the switches accordingly proved to be a complex and frustrating challenge. Despite the frustration, I persisted and succeeded in getting the configuration to work. Ultimately, I gained hands-on experience with trunk and access ports during this process.
+
 ### DHCP and VLAN Configuration
 <div align="center">
   <img src="/Diagrams/DHCP-Configuration.png" alt="DHCP Configuration" height="600">
 </div>
+
+
+## Robust Hardware Configuration
+
+## Scalable Infrastructure Design
+
+## Power Protection & Disaster Recovery
+Every rack is equipped with a CyberPower Smart App Intelligent LCD OR2200LCDRT2U UPS, delivering 2000VA of backup power and surge protection. This setup can sustain operation for several minutes during a power outage, providing enough time for safe shutdowns or auto-failover to backup systems.
+
+To enhance data resilience, a dual-layered backup approach is implemented:
+- Local backups are hosted on the main servers for fast file restoration in case of minor failures.
+- Off-site cloud backups via AWS ensure continuity during catastrophic events like natural disasters, using geo-redundant storage and scalable infrastructure.
+
+Both systems are monitored and tested regularly to ensure integrity, with clear procedures in place for emergency response and staff coordination. Backup priorities are set to protect institutional, employee, and student data first.
+
+## Comprehensive Cost Breakdown
+This network design balances **performance, scalability, and cost**. With an estimated total of **$120,017.30**, each component was chosen not just for compatibility, but also for long-term value and reliability. The budget covers:
+- Wireless Access Points
+- Server Racks
+- Switches
+- Cables
+- Connectors
+- Software License
+
+| Equipment                       | Product Name                                                                    | Quantity | Cost per Item | Total Cost   |
+|--------------------------------|----------------------------------------------------------------------------------|----------|---------------|--------------|
+| Server Rack                    | StarTech.com 4-Post 18U Open Frame Server Rack                                  | 6        | $277.99       | $1,667.94    |
+| Server Rack                    | StarTech.com 4-Post 24U Server Rack Cabinet                                     | 1        | $839.00       | $839.00      |
+| Uninterruptible Power Supply   | CyberPower Smart App Intelligent LCD OR2200LCDRT2U                              | 7        | $604.95       | $4,234.65    |
+| Server                         | Dell PowerEdge R240                                                             | 2        | $1,037.00     | $2,074.00    |
+| Router                         | Cisco Catalyst 8200-1N-4T                                                       | 1        | $1,739.99     | $1,739.99    |
+| Switch                         | Cisco Catalyst 1200-48P-4X                                                      | 20       | $1,189.99     | $23,799.80   |
+| Switch                         | Cisco Catalyst 1300-24XS                                                        | 2        | $2,243.99     | $4,487.98    |
+| Transceiver                    | Tripp Lite SFP+ Transceiver RJ45 Cat6a 98ft                                     | 84       | $174.99       | $14,699.16   |
+| Wireless Access Points         | Cisco Business 140AC                                                            | 58       | $88.99        | $5,161.42    |
+| Wall Plate                     | C2G Two Port Cat5E RJ45                                                         | 344      | $9.12         | $3,137.28    |
+| RJ45 Connectors                | Belkin network connector (100 pack)                                             | 15       | $19.99        | $299.85      |
+| Cable                          | Black Box GigaBase 350 CAT5e 1000ft Spool                                       | 120      | $259.99       | $31,198.80   |
+| Cable                          | Monoprice Cat6 500ft Spool                                                      | 4        | $89.99        | $359.96      |
+| Patch Cable                    | Monoprice Cat5e 6in Black Patch Cable                                           | 744      | $0.89         | $662.16      |
+| Patch Cable (switches)         | Monoprice Cat6A 6in Blue Patch Cable                                            | 36       | $0.99         | $35.64       |
+| Blank Patch Panels             | Tripp Lite 24-Port 1U Rack-Mount Shielded Blank Keystone/Multimedia Patch Panel | 36       | $39.99        | $1,439.64    |
+| Network Access Control Software| Cisco Identity Services Engine Device Admin - license                           | 1        | $8,629.99     | $8,629.99    |
+| DHCP Software                  | Cisco Prime Network Registrar DHCP                                              | 1        | $16,250.00    | $16,250.00   |
+|                                |                                                                                  |          | **Total**     | **$120,017.30** |
+
 
 # Floor Plans
 The wireless access point (WAP) coverage areas were estimated based on the building’s dimensions, using informed assumptions. Floors 1 and 2 are smaller—approximately 100 by 70 feet—due to the surrounding parking garage, while the residential floors (3–8) are significantly larger at 240 by 150 feet. The coverage visualization includes both 2.4GHz and 5GHz bands, represented by yellow and red circles, respectively.
