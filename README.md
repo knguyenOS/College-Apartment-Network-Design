@@ -167,32 +167,25 @@ WAP coverage visualization
 
 All circuits that form the **access layer** utilize **Cat5e cables** (highlighted in **green**), while **backbone cables** use **Cat6A** (highlighted in **orange**).
 
-## First Floor: 
+## First Floor: [⬆️ Back to top](#college-apartment-network-design-project)
 <p align="center">
   <img src="/Diagrams/Floor1.png" alt="First Floor Diagram" height="500">
-  <br>
-  [Back to top](#college-apartment-network-design-project)
 </p>
 
-## Second Floor:
+## Second Floor: [⬆️ Back to top](#college-apartment-network-design-project)
 <p align="center">
   <img src="/Diagrams/Floor2.png" alt="Second Floor Diagram" height="500">
-  <br>
-  [Back to top](#college-apartment-network-design-project)
 </p>
 
-## Third to Eighth Floors:
+## Third to Eighth Floors: [⬆️ Back to top](#college-apartment-network-design-project)
 <p align="center">
   <img src="/Diagrams/Floor3-8.png" alt="Third to Eighth Floor Diagram" height="500">
-  <br>
-  [Back to top](#college-apartment-network-design-project)
 </p>
 
-## 2.4GHz Channel Layout:
+## 2.4GHz Channel Layout: [⬆️ Back to top](#college-apartment-network-design-project)
+
 <p align="center">
   <img src="/Diagrams/2.4GHz-Channel-Configuration.png" alt="2.4GHz Channel Diagram" height="500">
-  <br>
-  [Back to top](#college-apartment-network-design-project)
 </p>
 
 # Conclusion
