@@ -46,7 +46,7 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
   - Utilizes VLANs (Virtual Local Area Network) to separate traffic based on user roles (infrastructure, employees, residents, and guests).
 
 - **Robust Hardware Configuration**
-  - Deploys access switches, core switches, wireless access points (WAPs), and servers supporting Active Directory (AD) and Dynamic Host Configuration Protocol (DHCP), with RAID (Redundant Array of Independent Disks) support.
+  - Deploys aswitches, wireless access points (WAPs), and servers for Active Directory (AD) and Dynamic Host Configuration Protocol (DHCP)
 
 - **Scalable Infrastructure Design**
   - Implements modular server racks with sufficient ports and physical space to accommodate future growth.
