@@ -7,7 +7,7 @@ _A technical overview of my final project for CIS 2347: Infrastructure and Netwo
 - [Project Overview](#college-apartment-network-design-project)
   - [Description](#description)
   - [Objectives](#objectives)
-  - [Tools Used](#programs-and-applications-used)
+  - [Programs and Applications Used](#programs-and-applications-used)
   - [Key Features](#features)
 - [Project Walkthrough](#walk-through)
   - [Initial Design](#the-initial-design)
@@ -48,19 +48,19 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
 - **Robust Hardware Configuration**
   - Deploys access switches, core switches, wireless access points (WAPs), and servers supporting Active Directory (AD) and Dynamic Host Configuration Protocol (DHCP), with RAID (Redundant Array of Independent Disks) support.
 
-- **Scalable Infrastructure Design**  
+- **Scalable Infrastructure Design**
   - Implements modular server racks with sufficient ports and physical space to accommodate future growth.
 
 - **Power Protection & Disaster Recovery**
   - Each rack includes an Uninterruptible Power Supply (UPS), which is connected to RAID-enabled servers with off-site backup on AWS.
 
-- **Comprehensive Cost Breakdown**  
+- **Comprehensive Cost Breakdown**
   - Total estimated project cost: **$120,000+**, with detailed line items for each network component.
 
 # Walk-through
 This project required a significant amount of time and effort to not only draft the initial layout but also to structure the entire network to work cohesively. It pushed me to think more about scaling the design, estimating WAP coverage, and ensuring efficient device placement. Throughout the process, I encountered several challenges that led to frustration and restless nights, but those same moments helped me grow and learn far more about practical network design.
 
-> For reference, this is my **largest and most comprehensive project** to date, involving hands-on work with **desigining, configuring, and setting up server rack configuration**.
+> For reference, this is my **largest and most comprehensive project** to date, involving hands-on work with **designing, configuring, and setting up server rack configuration**.
 
 ## The Initial Design
 <p align="center">
@@ -81,30 +81,30 @@ This project required a significant amount of time and effort to not only draft 
 </p>
 
 # Robust Hardware Configuration
-**Cisco Catalyst 1200** access switches with 48 ports  
-- Support both Power over Ethernet (PoE) and SFP+ uplinks  
-- Deliver up to 1 Gbps per port while powering connected WAPs and reducing setup complexity  
+**Cisco Catalyst 1200** access switches with 48 ports
+- Support both Power over Ethernet (PoE) and SFP+ uplinks
+- Deliver up to 1 Gbps per port while powering connected WAPs and reducing setup complexity
 
-**Cisco Catalyst 1300-24XS** core switches  
-- Optimized for high-speed backbone interconnects using SFP+ transceivers and Cat6A cabling  
-- Ensure fast data delivery and redundancy between floors  
+**Cisco Catalyst 1300-24XS** core switches
+- Optimized for high-speed backbone interconnects using SFP+ transceivers and Cat6A cabling
+- Ensure fast data delivery and redundancy between floors
 
-All switches are **rack-mountable** and housed in **server racks** per floor.  
-- Each floor's network equipment (i.e., cables, access switches) are housed within the floor's intermediate distribution frame (IDF)
+All switches are **rack-mountable** and housed in **server racks** per floor.
+- Each floor's network equipment (i.e., cables, access switches) is housed within the floor's intermediate distribution frame (IDF)
   - IDF uses 18U Open Frame Server Rack
 - Core network components which support the backbone network are centralized in a server rack in the main distribution frame (MDF)
   - MDF uses 24U Server Rack Cabinet
 
-To serve authentication and addressing needs:  
-- **Dell PowerEdge R240** servers run AD and DHCP for identity management and VLAN for segmentation  
-- These servers are backed with RAID support and can be expanded as needed  
+To serve authentication and addressing needs:
+- **Dell PowerEdge R240** servers run AD and DHCP for identity management and VLAN for segmentation
+- These servers are backed with RAID support and can be expanded as needed
 
 # Scalable Infrastructure Design
-Each floor's server rack contains 7U of available space after fitting switches, patch panels, and UPS.  
-- Allows for the addition of monitoring equipment or storage arrays  
+Each floor's server rack contains 7U of available space after fitting switches, patch panels, and UPS.
+- Allows for the addition of monitoring equipment or storage arrays
 
 The network topology uses a hybrid routed and switched backbone architecture 
-- Each access switch is connected to two core switches for redundancy and load balancing  
+- Each access switch is connected to two core switches for redundancy and load balancing
 - Modular components like patch panels, keystone jacks, and transceivers allow for quick replacement and expansion without rewiring
 
 <p align="center">
@@ -113,13 +113,13 @@ The network topology uses a hybrid routed and switched backbone architecture
 </p>
 
 # Power Protection & Disaster Recovery
-Every rack is equipped with a **CyberPower Smart App Intelligent LCD OR2200LCDRT2U UPS**  
-- Delivers **2000VA** of backup power and **surge protection**  
+Every rack is equipped with a **CyberPower Smart App Intelligent LCD OR2200LCDRT2U UPS**
+- Delivers **2000VA** of backup power and **surge protection**
 - Can sustain operation for several minutes during a power outage for **safe shutdowns** or **auto-failover**
 
-To enhance data resilience, a dual-layered backup approach is suggested:  
-- Local backups are hosted on the **main servers** for fast file restoration in case of minor failures  
-- Off-site **cloud backups via AWS** ensure continuity during **catastrophic events** like natural disasters  
+To enhance data resilience, a dual-layered backup approach is suggested:
+- Local backups are hosted on the **main servers** for fast file restoration in case of minor failures
+- Off-site **cloud backups via AWS** ensure continuity during **catastrophic events** like natural disasters
 
 # Comprehensive Cost Breakdown
 This network design balances **performance, scalability, and cost**. With an estimated total of **$120,017.30**, each component was chosen not just for compatibility, but also for long-term value and reliability. The budget covers:
