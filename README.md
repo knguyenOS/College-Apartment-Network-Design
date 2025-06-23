@@ -91,7 +91,9 @@ This project required a significant amount of time and effort to not only draft 
 
 All switches are **rack-mountable** and housed in **server racks** per floor.  
 - Each floor's network equipment (i.e., cables, access switches) are housed within the floor's intermediate distribution frame (IDF)
-- Core network components which support the backbone network are centralized in a 24U server rack in the main distribution frame (MDF)
+  - IDF uses 18U Open Frame Server Rack
+- Core network components which support the backbone network are centralized in a server rack in the main distribution frame (MDF)
+  - MDF uses 24U Server Rack Cabinet
 
 To serve authentication and addressing needs:  
 - **Dell PowerEdge R240** servers run AD and DHCP for identity management and VLAN for segmentation  
@@ -191,9 +193,9 @@ All circuits that form the **access layer** utilize **Cat5e cables** (highlighte
 # Conclusion
 
 ## Lessons Learned
-Though this documentation doesn't cover every step and moment of frustration, this project taught me a lot about the real-world complexities involved in designing scalable networks. From planning for scalability to implementing failover strategies, I gained confidence in configuring VLANs, simulating networks in Packet Tracer, and researching components and features more intuitively.
+Though this documentation doesn't cover every step and moment of frustration, this project taught me a lot about the real-world complexities involved in designing networks. From planning scalability to configuring server racks, I gained confidence in creating VLANs, simulating networks in Packet Tracer, and researching various components and features.
 
-Looking back, here are some notable things I would do differently if I had the chance to start over:
+Looking back, these are some notable things I would do differently if I had the chance to start over:
 - Start prototyping sooner
 - Rely less on trial-and-error
 - Focus on one step at a time
