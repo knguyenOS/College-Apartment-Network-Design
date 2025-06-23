@@ -1,7 +1,7 @@
 ![banner](https://informationage-production.s3.amazonaws.com/uploads/2022/10/AdobeStock_144479354-1568x1039.jpeg)
 
 # College Apartment Network Design Documentation
-_A detailed technical overview of my final project for CIS 2347: Infrastructure and Networking._
+_A technical overview of my final project for CIS 2347: Infrastructure and Networking._
 
 # Table of Contents
 - [Project Overview](#college-apartment-network-design-project)
