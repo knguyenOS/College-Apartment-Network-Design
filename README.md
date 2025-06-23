@@ -43,10 +43,10 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
 
 ## Features
 - **Secure Network Segmentation**
-  - Utilizes VLANs to separate traffic based on user roles (infrastructure, employees, residents, and guests).
+  - Utilizes VLANs (Virtual Local Area Network) to separate traffic based on user roles (infrastructure, employees, residents, and guests).
 
 - **Robust Hardware Configuration**
-  - Deploys access switches, core switches, wireless access points (WAPs), and servers supporting Active Directory and DHCP, with RAID support.
+  - Deploys access switches, core switches, wireless access points (WAPs), and servers supporting Active Directory (AD) and Dynamic Host Configuration Protocol (DHCP), with RAID (Redundant Array of Independent Disks) support.
 
 - **Scalable Infrastructure Design**  
   - Implements modular server racks with sufficient ports and physical space to accommodate future growth.
@@ -58,26 +58,26 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
   - Total estimated project cost: **$120,000+**, with detailed line items for each network component.
 
 # Walk-through
-This project required a significant amount of time and effort to not only draft the initial layout but also to structure the entire network to work cohesively. It pushed me to think more deeply about scaling the design, estimating WAP coverage, and ensuring efficient device placement. Throughout the process, I encountered several challenges that led to frustration and restless nights—but those same moments helped me grow and learn far more about practical network design.
+This project required a significant amount of time and effort to not only draft the initial layout but also to structure the entire network to work cohesively. It pushed me to think more about scaling the design, estimating WAP coverage, and ensuring efficient device placement. Throughout the process, I encountered several challenges that led to frustration and restless nights, but those same moments helped me grow and learn far more about practical network design.
 
-> This was my **largest and most comprehensive project** to date, involving hands-on work with **DHCP, VLANs, server racks, and disaster recovery planning**.
+> For reference, this is my **largest and most comprehensive project** to date, involving hands-on work with **desigining, configuring, and setting up server rack configuration**.
 
 ## The Initial Design
 <p align="center">
   <img src="/Diagrams/PT_Initial_Layout.png" alt="Initial logical network draft" height="700"><br>
-  <em>While this version reflected my initial vision, it became overly inefficient and tedious to manage—so I scrapped it and started fresh.</em>
+  <em>This version reflected my initial vision but quickly became overly inefficient and tedious to manage.</em>
 </p>
 
 ## Final Draft
 <p align="center">
   <img src="/Diagrams/PTLayout.png" alt="Final logical network"><br>
-  <em>This cleaner, scaled-down version significantly reduced the complexity of managing and configuring switches.</em>
+  <em>This scaled-down version significantly reduced the complexity of managing and configuring multiple devices.</em>
 </p>
 
 ## DHCP and VLAN Configuration
 <p align="center">
   <img src="/Diagrams/DHCP-Configuration.png" alt="DHCP Configuration" height="600"><br>
-  <em>Understanding and configuring VLANs on the DHCP server and switches took hours of research and testing</em>
+  <em>Configuring VLANs on the DHCP server and switches took many hours of errors and troubleshooting</em>
 </p>
 
 # Robust Hardware Configuration
@@ -91,11 +91,10 @@ This project required a significant amount of time and effort to not only draft 
 
 All switches are **rack-mountable** and housed in **server racks** per floor.  
 - Each floor contains an intermediate distribution frame (IDF) room for housing the server rack  
-- Core equipment—including servers, core switches, and routers—is centralized in a 24U server enclosure located in the main distribution frame (MDF)  
-- Network devices are organized using blank keystone patch panels, Cat5e/Cat6 cables, and RJ45 connectors, enabling clean, scalable cabling layouts  
+- Core equipments such as servers, switches, and routers are centralized in a 24U server rack in the main distribution frame (MDF)
 
 To serve authentication and addressing needs:  
-- Two **Dell PowerEdge R240** servers run Active Directory and DHCP for identity management and VLAN-based traffic segmentation  
+- Two **Dell PowerEdge R240** servers run AD and DHCP for identity management and VLAN-based traffic segmentation  
 - These servers are backed with RAID support and can be expanded as needed  
 
 # Scalable Infrastructure Design
