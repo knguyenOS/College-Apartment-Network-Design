@@ -46,7 +46,7 @@ This project was developed for my CIS 2347 Infrastructure and Networking course.
   - Utilizes VLANs (Virtual Local Area Network) to separate traffic based on user roles (infrastructure, employees, residents, and guests).
 
 - **Robust Hardware Configuration**
-  - Deploys aswitches, wireless access points (WAPs), and servers for Active Directory (AD) and Dynamic Host Configuration Protocol (DHCP)
+  - Deploys switches, wireless access points (WAPs), and servers for Active Directory (AD) and Dynamic Host Configuration Protocol (DHCP)
 
 - **Scalable Infrastructure Design**
   - Implements modular server racks with sufficient ports and physical space to accommodate future growth.
@@ -109,7 +109,7 @@ The network topology uses a hybrid routed and switched backbone architecture
 
 <p align="center">
   <img src="/Diagrams/Network-Closet-Switch-Configuration.png" alt="Cable configuration of switches on server rack" height="700"><br>
-  <em>General layout of how cables are configured on access switches. Green indicates Ethernet drops to resident rooms. Red indicates WAPs.</em>
+  <em>General layout of access switches. Green indicates Ethernet drops from resident rooms. Red indicates WAPs.</em>
 </p>
 
 # Power Protection & Disaster Recovery
