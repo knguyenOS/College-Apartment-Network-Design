@@ -65,13 +65,13 @@ This project required a significant amount of time and effort to not only draft 
 ## The Initial Design
 <p align="center">
   <img src="/Diagrams/PT_Initial_Layout.png" alt="Initial logical network draft" height="700"><br>
-  <em>This version reflected my initial vision but quickly became overly inefficient and tedious to manage.</em>
+  <em>This initial version reflected my vision but quickly became overly inefficient and tedious to manage.</em>
 </p>
 
 ## Final Draft
 <p align="center">
   <img src="/Diagrams/PTLayout.png" alt="Final logical network"><br>
-  <em>This scaled-down version significantly reduced the complexity of managing and configuring multiple devices.</em>
+  <em>This final version significantly reduced the complexity of managing and configuring multiple devices.</em>
 </p>
 
 ## DHCP and VLAN Configuration
@@ -90,22 +90,20 @@ This project required a significant amount of time and effort to not only draft 
 - Ensure fast data delivery and redundancy between floors  
 
 All switches are **rack-mountable** and housed in **server racks** per floor.  
-- Each floor contains an intermediate distribution frame (IDF) room for housing the server rack  
-- Core equipments such as servers, switches, and routers are centralized in a 24U server rack in the main distribution frame (MDF)
+- Each floor's network equipment (i.e., cables, access switches) are housed within the floor's intermediate distribution frame (IDF)
+- Core network components which support the backbone network are centralized in a 24U server rack in the main distribution frame (MDF)
 
 To serve authentication and addressing needs:  
-- Two **Dell PowerEdge R240** servers run AD and DHCP for identity management and VLAN-based traffic segmentation  
+- **Dell PowerEdge R240** servers run AD and DHCP for identity management and VLAN for segmentation  
 - These servers are backed with RAID support and can be expanded as needed  
 
 # Scalable Infrastructure Design
 Each floor's server rack contains 7U of available space after fitting switches, patch panels, and UPS.  
-- Allows for the addition of switches, monitoring equipment, or storage arrays  
+- Allows for the addition of monitoring equipment or storage arrays  
 
-The network topology uses a hybrid routed and switched backbone architecture, balancing performance with flexibility.  
+The network topology uses a hybrid routed and switched backbone architecture 
 - Each access switch is connected to two core switches for redundancy and load balancing  
-- Modular components like patch panels, keystone jacks, and transceivers allow for quick replacement and expansion without rewiring the entire system  
-
-The use of bulk Cat5e and Cat6A spools, along with modular cabling infrastructure, ensures new Ethernet drops and endpoints can be added without major overhauls. **802.1Q VLAN tagging** and **dynamic VLAN assignment via RADIUS and Active Directory** further improve logical scalability.
+- Modular components like patch panels, keystone jacks, and transceivers allow for quick replacement and expansion without rewiring
 
 <p align="center">
   <img src="/Diagrams/Network-Closet-Switch-Configuration.png" alt="Cable configuration of switches on server rack" height="700"><br>
@@ -115,8 +113,7 @@ The use of bulk Cat5e and Cat6A spools, along with modular cabling infrastructur
 # Power Protection & Disaster Recovery
 Every rack is equipped with a **CyberPower Smart App Intelligent LCD OR2200LCDRT2U UPS**  
 - Delivers **2000VA** of backup power and **surge protection**  
-- Can sustain operation for several minutes during a power outage  
-- Enough time for **safe shutdowns** or **auto-failover** to backup systems  
+- Can sustain operation for several minutes during a power outage for **safe shutdowns** or **auto-failover**
 
 To enhance data resilience, a dual-layered backup approach is suggested:  
 - Local backups are hosted on the **main servers** for fast file restoration in case of minor failures  
